@@ -1,15 +1,16 @@
 import Header from "./Header";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Table } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-function ProductList() {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        fetchData()
-    }, []);
-    async function fetchData() {
-        let result = await fetch('http://127.0.0.1:8000/api/list');
-        result = await result.json();
+
+
+// import Axios from 'axios';
+function SearchProduct() {
+    const [data,setData]=useState([])
+    async function search(key){
+        console.warn(key);
+        let result = await fetch("http://127.0.0.1:8000/api/search/"+key)
+        result =await result.json()
         setData(result)
     }
     async function deleteOperation(id){
@@ -18,12 +19,17 @@ function ProductList() {
         });
         result = await result.json();
         console.warn(result); 
-        fetchData()
+        SearchProduct()
     }
+    console.warn(data)
     return (
         <div>
             <Header />
-            <Table>
+            <div className="col-sm-6 offset-sm-3">
+                <h1>Search Product</h1>
+                <br/>
+                <input className="form-control" placeholder="Search Product" onChange={(e)=>e.target.value?search(e.target.value):setData([])}/>
+                <Table>
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -55,7 +61,8 @@ function ProductList() {
                     }
                 </tbody>
             </Table>
+            </div>
         </div>
     );
 }
-export default ProductList
+export default SearchProduct

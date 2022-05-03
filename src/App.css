@@ -14,7 +14,20 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.delete{
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.update{
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

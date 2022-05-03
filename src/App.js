@@ -11,6 +11,8 @@ import Login from './Pages/login';
 import Register from './Pages/register';
 import Protected from './Protected';
 import ProductList from "./Pages/ProductList";
+import SearchProduct from "./Pages/SearchProduct";
+
 
 function App() {
   return (
@@ -30,9 +32,16 @@ function App() {
         // <AddProduct/> 
         <Protected Cmp={AddProduct}/>
         }/>
+        <Route path='/update/:id' element={ 
+        <Protected Cmp={UpdateProduct} />
+        // <UpdateProduct/>  
+        }/>
         <Route path='/update' element={ 
         <Protected Cmp={UpdateProduct} />
-        // <UpdateProduct/> 
+        // <UpdateProduct/>  
+        }/>
+         <Route path='/search' element={ 
+        <Protected Cmp={SearchProduct} />
         }/>
         </Routes>
       </Router>
