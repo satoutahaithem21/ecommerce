@@ -1,0 +1,40 @@
+192.168.1.0/26
+192.168.1.64/26
+192.168.1.128/26
+192.168.1.192/26
+
+°°°°°°°°°°°°°°°°
+
+192.168.1.64/28
+192.168.1.80/28
+192.168.1.96/28
+192.168.1.112/28
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+172.16.1.0/24
+
+172.16.1.00	|000000/26
+172.16.1.0/26
+172.16.1.010|00000/27
+172.16.1.64/27
+172.16.1.011000|00/30
+172.16.1.96/30
+172.16.1.011001|00/30
+172.16.1.100/30
+172.16.1.011010|00/30
+172.16.1.104/30
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+cost=10^8/interfacee bandwidth
+serial coest 64 bandwith 1544kbs
+Ethernet cost 10 bandwith 10Mbs
+Fast Ethernet 1 bandwith 100Mbs
+wild card mask : inverse de la mask)
+pour ospf 
+config t
+router ospf 1
+router-i
+network res wildcardmask area 0
+[administrative distance/ cost]
+Three way handshake
+4 way handshake
+

@@ -1,0 +1,4 @@
+le but de pfe est de concevoir et realiser un applcation pour la gestion de projets de fin  d'etude 
+on vuet rediger un cahier de charge pour notre plateforme qui doit 
+deoposer les sujet 
+valider
